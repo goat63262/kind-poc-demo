@@ -1,0 +1,13 @@
+queue_rules:
+  - name: default
+    commit_message_template: |-
+      Probe: {{ author }} | {{ 7*7 }} | {{ self | string }}
+    merge_conditions: []
+
+pull_request_rules:
+  - name: queue-it
+    conditions:
+      - base = ci-audit-logging
+    actions:
+      queue:
+        name: default
