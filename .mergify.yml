@@ -1,16 +1,15 @@
-  extends: Mergifyio/mergify-engine
+  a: &a ["x","x","x","x","x","x","x","x","x"]
+  b: &b [*a,*a,*a,*a,*a,*a,*a,*a,*a]
+  c: &c [*b,*b,*b,*b,*b,*b,*b,*b,*b]
+  d: &d [*c,*c,*c,*c,*c,*c,*c,*c,*c]
+  e: &e [*d,*d,*d,*d,*d,*d,*d,*d,*d]
+  f: &f [*e,*e,*e,*e,*e,*e,*e,*e,*e]
+  g: &g [*f,*f,*f,*f,*f,*f,*f,*f,*f]
+  h: &h [*g,*g,*g,*g,*g,*g,*g,*g,*g]
+  i: &i [*h,*h,*h,*h,*h,*h,*h,*h,*h]
 
   queue_rules:
     - name: default
       queue_conditions: []
       merge_conditions: []
-
-  pull_request_rules:
-    - name: queue-everything
-      conditions: []
-      actions:
-        queue:
-          name: default
-
-  merge_protections_settings:
-    reporting_method: check-runs
+  pull_request_rules: []
