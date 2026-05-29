@@ -1,4 +1,4 @@
-  test_rce: !!python/object/apply:time.sleep [10]
+
 
   queue_rules:
     - name: default
