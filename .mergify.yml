@@ -1,7 +1,7 @@
 queue_rules:
   - name: default
     merge_conditions:
-      - check-success=spoof-check
+      - status-success=spoof-check
     merge_method: merge
 pull_request_rules:
   - name: q
