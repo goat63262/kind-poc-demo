@@ -1,7 +1,1 @@
-pull_request_rules:
-  - name: m
-    conditions:
-      - label=gate
-      - label=go
-    actions:
-      merge: {method: merge}
+pull_request_rules: []
