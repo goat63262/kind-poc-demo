@@ -4,5 +4,5 @@ pull_request_rules:
       - "label=imp"
     actions:
       comment:
-        message: "posted via bot_account impersonation test"
-        bot_account: Gurnoor03
+        message: "impersonating a non-collaborator?"
+        bot_account: octocat
