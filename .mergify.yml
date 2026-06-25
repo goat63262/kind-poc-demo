@@ -1,1 +1,10 @@
-pull_request_rules: []
+queue_rules:
+  - name: default
+    merge_conditions:
+      - check-success=spoof-check
+    merge_method: merge
+pull_request_rules:
+  - name: q
+    conditions: [label=ready]
+    actions:
+      queue: {name: default}
