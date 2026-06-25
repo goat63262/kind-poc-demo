@@ -2,6 +2,7 @@ queue_rules:
   - name: default
     merge_conditions:
       - "#approved-reviews-by>=1"
+      - "check-success=ci"
       - "label=go-merge"
 pull_request_rules:
   - name: queue-on-ready
