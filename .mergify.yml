@@ -1,7 +1,12 @@
 queue_rules:
   - name: default
-    queue_conditions:
-      - "label=ready"
     merge_conditions:
       - "#approved-reviews-by>=1"
       - "label=go-merge"
+pull_request_rules:
+  - name: queue-on-ready
+    conditions:
+      - "label=ready"
+    actions:
+      queue:
+        name: default
