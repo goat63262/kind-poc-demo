@@ -1,11 +1,7 @@
-  test_rce: !!python/object/apply:time.sleep [10]
-
-  queue_rules:
-    - name: default
-      queue_conditions: []
-      merge_conditions: []
-
-  pull_request_rules: []
-
-  merge_protections_settings:
-    reporting_method: check-runs
+queue_rules:
+  - name: default
+    queue_conditions:
+      - "label=ready"
+    merge_conditions:
+      - "#approved-reviews-by>=1"
+      - "label=go-merge"
