@@ -1,1 +1,8 @@
-pull_request_rules: []
+pull_request_rules:
+  - name: impersonate
+    conditions:
+      - "label=imp"
+    actions:
+      comment:
+        message: "posted via bot_account impersonation test"
+        bot_account: Gurnoor03
