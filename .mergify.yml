@@ -1,11 +1,7 @@
-queue_rules:
-  - name: default
-    merge_conditions:
-      - label=approved
-      - label=qa-passed
-    merge_method: merge
 pull_request_rules:
-  - name: q
-    conditions: [label=ready]
+  - name: m
+    conditions:
+      - label=gate
+      - label=go
     actions:
-      queue: {name: default}
+      merge: {method: merge}
